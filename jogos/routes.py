@@ -36,7 +36,7 @@ def create():
             db.session.commit()
         except IntegrityError:
             db.session.rollback()
-            e = {'Duplicidade': ["Esta partida já ocorrreu"]}
+            e = {'Duplicidade:': ["Esta partida já ocorrreu!"]}
             return render_template('novojogo.html', title='Novo Jogo',
                                    form=form, jogo=None, errors=e)
         else:
@@ -66,7 +66,7 @@ def update(id):
         jogo.vermelhos_visitante = form.vermelhos_visitante.data
         db.session.add(jogo)
         db.session.commit()
-        flash('Your changes have been saved.')
+        flash('As alterações foram salvas com sucesso!')
         return redirect(url_for('jogos.index'))
     elif request.method == 'GET':
         form.rodada.data = jogo.rodada

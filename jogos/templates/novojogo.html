@@ -17,7 +17,56 @@
 {% endif %}
 <!-- Faça o template a partir daqui-->
 
-Fazer o template Aqui
-	
+	<h1>{{ title }}</h1>
+	<br>
+	<form action="" method="POST" novalidate>
+			{{ form.hidden_tag() }}
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-5 text-right">
+					<div>
+						{{ form.mandante() }}
+						{{ form.gols_mandante(size=2) }}
+					</div>
+					<div>
+						<img class="escudo-mini" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Yellow_card.svg/100px-Yellow_card.svg.png">
+						{{ form.amarelos_mandante(size=2) }}
+						<img class="escudo-mini" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Red_card.svg/100px-Red_card.svg.png">
+						{{ form.vermelhos_mandante(size=2) }}
+					</div>
+				</div>
+				<div class="col-lg-1 text-center">X</div>
+				<div class="col-lg-5 text-left">
+					<div>
+						{{ form.gols_visitante(size=2) }}
+						{{ form.visitante() }}
+					</div>
+					<div>
+						<img class="escudo-mini" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Red_card.svg/100px-Red_card.svg.png">
+						{{ form.vermelhos_visitante(size=2) }}
+						<img class="escudo-mini" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Yellow_card.svg/100px-Yellow_card.svg.png">
+						{{ form.amarelos_visitante(size=2) }}
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12" style="margin: 1em;"></div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 text-right">
+					{{ form.rodada.label }}: {{ form.rodada(size=2) }}
+				</div>
+				<div class="col-md-4">
+					{{ form.data.label }}: {{ form.data() }}
+				</div>
+				<div class="col-md-4 text-left">
+					{{ form.enviar }}
+					{% if jogo %}
+					<a href="{{ url_for('jogos.delete', id=jogo.id) }}">Deletar</a>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</form>
 {% endblock %}
 
