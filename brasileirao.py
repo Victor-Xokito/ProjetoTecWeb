@@ -8,7 +8,7 @@ from config import Config
 # Faculdade Imapcta Tecnologia
 # Tecnologia Web 01/2020 - ADS/SI
 # Grupo XX:
-# nome.sobrenome@aluno.faculdadeimpacta.com.br
+# victor.pinehrio@aluno.faculdadeimpacta.com.br - 1900995 - ADS
 # nome.sobrenome@aluno.faculdadeimpacta.com.br
 # nome.sobrenome@aluno.faculdadeimpacta.com.br
 # nome.sobrenome@aluno.faculdadeimpacta.com.br
