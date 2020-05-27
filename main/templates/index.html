@@ -1,5 +1,38 @@
 {% extends "base.html"%}
 
 {% block app_content %}
-	Fazer a tabela de classificação aqui
+	<table class="table table-responsible">
+		<thead class="thead-dark">
+			<tr>
+				<th></th>
+				<th>Time</th>
+				<th>P</th>
+				<th>J</th>
+				<th>V</th>
+				<th>E</th>
+				<th>D</th>
+				<th>GP</th>
+				<th>GC</th>
+				<th>SG</th>
+				<th>CA</th>
+				<th>CV</th>
+			</tr>
+		</thead>
+		{% for time in times %}
+		<tr>
+			<td><img class="escudo-mini" src="{{ time.escudo }}"></td>
+			<td>{{ time.nome }}</td>
+			<td>{{ time.pontos }}</td>
+			<td>{{ time.jogos | length }}</td>
+			<td>{{ time.vitorias }}</td>
+			<td>{{ time.empates }}</td>
+			<td>{{ time.derotas }}</td>
+			<td>{{ time.gols_pro }}</td>
+			<td>{{ time.gols_contra }}</td>
+			<td>{{ time.saldo_gols }}</td>
+			<td>{{ time.cartoes_amarelos }}</td>
+			<td>{{ time.cartoes_vermelhos }}</td>
+		</tr>
+		{% endfor %}
+	</table>
 {% endblock %}
