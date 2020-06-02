@@ -60,9 +60,9 @@
 					{{ form.data.label }}: {{ form.data() }}
 				</div>
 				<div class="col-md-4 text-left">
-					{{ form.enviar }}
+					{{ form.enviar(class="btn btn-primary") }}
 					{% if jogo %}
-					<a href="{{ url_for('jogos.delete', id=jogo.id) }}">Deletar</a>
+					<a href="{{ url_for('jogos.delete', id=jogo.id) }}"class="btn btn-danger">Deletar</a>
 					{% endif %}
 				</div>
 			</div>

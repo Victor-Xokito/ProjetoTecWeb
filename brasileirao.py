@@ -8,11 +8,11 @@ from config import Config
 # Faculdade Imapcta Tecnologia
 # Tecnologia Web 01/2020 - ADS/SI
 # Grupo XX:
-# victor.pinehrio@aluno.faculdadeimpacta.com.br - 1900995 - ADS
-# nome.sobrenome@aluno.faculdadeimpacta.com.br
-# nome.sobrenome@aluno.faculdadeimpacta.com.br
-# nome.sobrenome@aluno.faculdadeimpacta.com.br
-# nome.sobrenome@aluno.faculdadeimpacta.com.br
+# alisson.alves@aluno.faculdadeimpacta.com.br - 1902063 - ADS
+# davi.sun@aluno.faculdadeimpacta.com.br - 1901628 - SI
+# fabio.miziara@aluno.faculdadeimpacta.com.br - 1901990 - SI
+# miguel.albiach@aluno.faculdadeimpacta.com.br - 1901929 - SI
+# victor.pinheiro@aluno.faculdadeimpacta.com.br - 1900995 - ADS
 
 app = Flask(__name__)
 app.config.from_object(Config)

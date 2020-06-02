@@ -1,8 +1,15 @@
 .escudo-mini{
     height: 2em;
 }
-/*
-CSS usados por mim mas que vocês não precisam utilizar
+
+.navbar navbar-dark{
+    color: black;
+}
+
+body{
+    background-color: chartreuse;
+}
+
 tr td:first-child{
     width: 1%;
 }
@@ -25,4 +32,4 @@ a > li{
 .center{
     display: table;
     margin: 1em auto;
-}*/
+}

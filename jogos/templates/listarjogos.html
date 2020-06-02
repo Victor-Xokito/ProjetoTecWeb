@@ -1,7 +1,7 @@
 {% extends "base.html"%}
 
 {% block app_content %}
-<a href="{{ url_for('jogos.create') }}"> Adicionar Novo Jogo </a>
+<a href="{{ url_for('jogos.create') }}" class="btn btn-primary"> Adicionar Novo Jogo </a>
 <br>
 <br>
 
@@ -11,7 +11,7 @@
     <ul class="list-unstyled row">
         {% for jogo in jogos[rodada] %}
         <a href="{{ url_for('jogos.update', id=jogo.id) }}">
-            <li class="list-group-item col-md-4 texte-center">
+            <li class="list-group-item col-md-4 texte-center" style="background-color:  #ff00bf;">
                 
                 <img class="escudo-mini" src="{{(jogo.mandante.escudo)}}">
                 {{ jogo.mandante.nome }}

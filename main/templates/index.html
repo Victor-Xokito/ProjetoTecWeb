@@ -1,23 +1,23 @@
 {% extends "base.html"%}
 
+
 {% block app_content %}
-	<table class="table table-responsible">
-		<thead class="thead-dark">
-			<tr>
-				<th></th>
-				<th>Time</th>
-				<th>P</th>
-				<th>J</th>
-				<th>V</th>
-				<th>E</th>
-				<th>D</th>
-				<th>GP</th>
-				<th>GC</th>
-				<th>SG</th>
-				<th>CA</th>
-				<th>CV</th>
-			</tr>
-		</thead>
+	<div class="p-3 mb-2 text-white">
+		<table class="table table-responsible" style="background-color:  #ff00bf;" >
+		<tr>
+			<td></td>
+			<td>Time</td>
+			<td>P</td>
+			<td>J</td>
+			<td>V</td>
+			<td>E</td>
+			<td>D</td>
+			<td>GP</td>
+			<td>GC</td>
+			<td>SG</td>
+			<td>CA</td>
+			<td>CV</td>
+		</tr>
 		{% for time in times %}
 		<tr>
 			<td><img class="escudo-mini" src="{{ time.escudo }}"></td>
@@ -26,7 +26,7 @@
 			<td>{{ time.jogos | length }}</td>
 			<td>{{ time.vitorias }}</td>
 			<td>{{ time.empates }}</td>
-			<td>{{ time.derotas }}</td>
+			<td>{{ time.derrotas }}</td>
 			<td>{{ time.gols_pro }}</td>
 			<td>{{ time.gols_contra }}</td>
 			<td>{{ time.saldo_gols }}</td>
@@ -34,5 +34,10 @@
 			<td>{{ time.cartoes_vermelhos }}</td>
 		</tr>
 		{% endfor %}
-	</table>
+		</table>
+		<img height="400" width="433" class="rounded float-left img-thumbnail " src="https://miro.medium.com/max/1280/1*0L9hN2ui6-c9C9chAlyq9w.jpeg">
+		<img height="400" width="252" class="rounded float-center img-thumbnail " src="http://1.bp.blogspot.com/-LLdvbzVggZ8/ThzkZMAAwGI/AAAAAAAAAFI/3Vu_LgS3PZA/s320/23077904.jpg">
+		<img height="400" width="348" class="rounded float-right img-thumbnail" src="https://cdn.serounaosei.com/wp-content/uploads/20181122215422/Cavaleiros-do-zodiaco.jpg">
+	</div>
+	
 {% endblock %}

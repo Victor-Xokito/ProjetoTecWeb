@@ -8,7 +8,7 @@ class NovoTimeForm(FlaskForm):
 
     nome_time = StringField('Nome do Time', validators=[DataRequired(), Length(min=3, max=50)])
     escudo = StringField('Link Escudo')
-    enviar = SubmitField('enviar')
+    enviar = SubmitField('Enviar')
 
     def __init__(self, nome_original=None, *args, **kwargs):
         super(NovoTimeForm, self).__init__(*args, **kwargs)
