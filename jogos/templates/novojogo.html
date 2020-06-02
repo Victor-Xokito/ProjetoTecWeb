@@ -25,7 +25,7 @@
 			<div class="row">
 				<div class="col-lg-5 text-right">
 					<div>
-						{{ form.mandante() }}
+						{{ form.mandante(style="background-color:  #ff00bf;") }}
 						{{ form.gols_mandante(size=2) }}
 					</div>
 					<div>
@@ -39,7 +39,7 @@
 				<div class="col-lg-5 text-left">
 					<div>
 						{{ form.gols_visitante(size=2) }}
-						{{ form.visitante() }}
+						{{ form.visitante(style="background-color:  #ff00bf;") }}
 					</div>
 					<div>
 						<img class="escudo-mini" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Red_card.svg/100px-Red_card.svg.png">
@@ -57,7 +57,7 @@
 					{{ form.rodada.label }}: {{ form.rodada(size=2) }}
 				</div>
 				<div class="col-md-4">
-					{{ form.data.label }}: {{ form.data() }}
+					{{ form.data.label }}: {{ form.data(style="background-color:  #ff00bf;") }}
 				</div>
 				<div class="col-md-4 text-left">
 					{{ form.enviar(class="btn btn-primary") }}
